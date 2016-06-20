@@ -1,0 +1,82 @@
+buildscript {
+	repositories {
+		jcenter()
+	}
+	dependencies {
+
+	}
+}
+
+allprojects {
+	apply plugin: 'groovy'
+	apply plugin: 'java'
+	apply plugin: 'idea'
+	apply plugin: 'eclipse'
+
+	group = project.groupId
+	sourceCompatibility = project.javaVersion
+	targetCompatibility = project.javaVersion
+	version = project.version
+
+	dependencies {
+		compile "org.codehaus.groovy:groovy-all:${project.groovyVersion}"
+		testCompile "org.spockframework:spock-core:${project.spockVersion}"
+	}
+
+	sourceSets {
+		main {
+			java {
+				srcDirs = []
+			}
+			groovy {
+				srcDirs += ['src/generated/groovy', 'src/generated/java', 'src/main/java']
+			}
+		}
+		integrationTest {
+			java {
+				srcDirs = []
+			}
+			groovy {
+				srcDirs += ['src/test/integration/java', 'src/test/integration/groovy', 'src/generated/groovy', 'src/generated/java', 'src/ma/java']
+			}
+			resources {
+				srcDir 'src/test/integration/resources'
+			}
+		}
+	}
+
+	repositories {
+		jcenter()
+		mavenLocal()
+	}
+
+	idea {
+		module {
+			inheritOutputDirs = false
+			outputDir = file("$buildDir/classes/main/")
+			iml {
+				beforeMerged { module ->
+					module.dependencies.clear()
+					module.excludeFolders.clear()
+				}
+				whenMerged { module ->
+					module.dependencies*.exported = true
+					module.excludeFolders += module.pathFactory.path(file(".idea"))
+					module.excludeFolders += module.pathFactory.path(file(".gradle"))
+					module.excludeFolders += module.pathFactory.path(file(".node_modules"))
+					module.excludeFolders += module.pathFactory.path(file("$buildDir/bundles"))
+					module.excludeFolders += module.pathFactory.path(file("$buildDir/classes"))
+					module.excludeFolders += module.pathFactory.path(file("$buildDir/dependency-cache"))
+					module.excludeFolders += module.pathFactory.path(file("$buildDir/libs"))
+					module.excludeFolders += module.pathFactory.path(file("$buildDir/reports"))
+					module.excludeFolders += module.pathFactory.path(file("$buildDir/test-results"))
+					module.excludeFolders += module.pathFactory.path(file("$buildDir/tmp"))
+					module.excludeFolders += module.pathFactory.path(file("$buildDir/matrix"))
+					module.excludeFolders += module.pathFactory.path(file("$buildDir/resources"))
+					module.excludeFolders -= module.pathFactory.path(file("$buildDir"))
+				}
+			}
+			downloadSources = true
+		}
+	}
+}
