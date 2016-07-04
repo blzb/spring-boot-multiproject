@@ -1,5 +1,7 @@
 package com.nsip.framework
 
+import com.nsip.framework.db.dao.PersonaRepository
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 /**
@@ -7,7 +9,10 @@ import org.springframework.stereotype.Service
  */
 @Service
 class TestService {
+  @Autowired
+  PersonaRepository personRepository
+
   String getRandom(){
-    UUID.randomUUID().toString()
+    personRepository.count()+"Persons"
   }
 }
