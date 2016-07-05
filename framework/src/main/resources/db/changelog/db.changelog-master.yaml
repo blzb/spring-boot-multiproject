@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: framework-1
+      author: framework-module
+      changes:
+        - createTable:
+            tableName: persona
+            columns:
+              - column:
+                  name: id
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: nombre
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: apellido
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: titulo
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: departamento
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+  - includeAll:
+        path: modules/changelogs

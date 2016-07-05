@@ -20,6 +20,7 @@ dependencies {
   cloud_starters.each { name ->
     compile("org.springframework.cloud:spring-cloud-starter-${name}:${project.springCloudVersion}")
   }
+  compile project(':framework')
 
 }
 
