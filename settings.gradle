@@ -1,3 +1,5 @@
 include 'framework'
 include 'audiencias'
 include 'procuraduria'
+include 'medidacautelar'
+include 'bienesasegurados'

@@ -6,7 +6,6 @@ buildscript {
     classpath "org.springframework.boot:spring-boot-gradle-plugin:${project.springBootVersion}"
   }
 }
-apply plugin: 'spring-boot'
 
 def boot_starters = ['web']
 
@@ -16,14 +15,9 @@ dependencies {
   boot_starters.each { name ->
     compile("org.springframework.boot:spring-boot-starter-${name}:${project.springBootVersion}")
   }
+  compile project(':framework')
 
   compile project(':audiencias')
-  compile project(':medidacautelar')
-  compile project(':bienesasegurados')
-
-  cloud_starters.each { name ->
-    compile("org.springframework.cloud:spring-cloud-starter-${name}:${project.springCloudVersion}")
-  }
 
 }
 

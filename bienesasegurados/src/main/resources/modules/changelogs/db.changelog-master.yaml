@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: audiencias-1
+      author: audiencias-module
+      changes:
+        - createTable:
+            tableName: audiencia
+            columns:
+              - column:
+                  name: id
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: fecha
+                  type: datetime
+                  constraints:
+                    nullable: false
