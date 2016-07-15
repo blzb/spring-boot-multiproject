@@ -1,10 +1,10 @@
-package com.nsip.framework.security
+package com.nsip.framework.security;
 
-import org.springframework.context.annotation.Configuration
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity
-import org.springframework.security.config.annotation.web.builders.HttpSecurity
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 /**
  * Created by apimentel on 7/5/16.
@@ -21,7 +21,7 @@ class SecurityConfiguration  extends WebSecurityConfigurerAdapter {
 
     auth.inMemoryAuthentication()
       .withUser("user").password("user").roles("USER").and()
-      .withUser("admin").password("admin").roles("USER", "ADMIN")
+      .withUser("admin").password("admin").roles("USER", "ADMIN");
   }
 
   /**
@@ -37,6 +37,6 @@ class SecurityConfiguration  extends WebSecurityConfigurerAdapter {
   protected void configure(HttpSecurity http) throws Exception {
     http.authorizeRequests().anyRequest().fullyAuthenticated().and().
       httpBasic().and().
-      csrf().disable()
+      csrf().disable();
   }
 }

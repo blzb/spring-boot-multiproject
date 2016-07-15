@@ -22,5 +22,6 @@ dependencies {
   }
   compile 'com.h2database:h2:1.4.192'
   compile 'org.liquibase:liquibase-core:3.4.0'
+  compile 'io.springfox:springfox-swagger2:2.4.0'
 }
 

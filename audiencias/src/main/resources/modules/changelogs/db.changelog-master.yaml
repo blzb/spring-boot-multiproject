@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
-      id: audiencias-1
-      author: audiencias-module
+      id: ejemplo-1
+      author: ejemplo-module
       changes:
         - createTable:
-            tableName: audiencia
+            tableName: ejemplo
             columns:
               - column:
                   name: id
