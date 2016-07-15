@@ -1,6 +1,6 @@
-package com.nsip.framework;
+package com.mopgp.framework;
 
-import com.nsip.framework.db.dao.PersonaRepository;
+import com.mopgp.framework.db.dao.PersonaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

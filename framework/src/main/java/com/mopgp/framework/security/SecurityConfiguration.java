@@ -1,4 +1,4 @@
-package com.nsip.framework.security;
+package com.mopgp.framework.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;

@@ -1,6 +1,6 @@
-package com.nsip.audiencias.dao;
+package com.mopgp.ejemplo.dao;
 
-import com.nsip.audiencias.db.Ejemplo;
+import com.mopgp.ejemplo.db.Ejemplo;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.security.access.prepost.PreAuthorize;
 

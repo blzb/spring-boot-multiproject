@@ -1,7 +1,6 @@
-package com.nsip.framework.db.dbo;
+package com.mopgp.framework.db.dbo;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.UUID;
 

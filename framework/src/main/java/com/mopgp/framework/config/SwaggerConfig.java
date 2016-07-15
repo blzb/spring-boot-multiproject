@@ -1,4 +1,4 @@
-package com.nsip.framework.config;
+package com.mopgp.framework.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

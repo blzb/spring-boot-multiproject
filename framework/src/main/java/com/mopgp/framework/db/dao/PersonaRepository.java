@@ -1,6 +1,6 @@
-package com.nsip.framework.db.dao;
+package com.mopgp.framework.db.dao;
 
-import com.nsip.framework.db.dbo.*;
+import com.mopgp.framework.db.dbo.*;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.security.access.prepost.PreAuthorize;

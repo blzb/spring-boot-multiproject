@@ -1,4 +1,4 @@
-package com.nsip.audiencias.db;
+package com.mopgp.ejemplo.db;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
