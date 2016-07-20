@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: ejemplo2-1
+      author: ejemplo2-module
+      changes:
+        - createTable:
+            tableName: ejemplo2
+            columns:
+              - column:
+                  name: id
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: fecha
+                  type: datetime
+                  constraints:
+                    nullable: false

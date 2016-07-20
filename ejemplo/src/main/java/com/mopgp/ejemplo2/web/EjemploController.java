@@ -1,4 +1,4 @@
-package com.mopgp.ejemplo.web;
+package com.mopgp.ejemplo2.web;
 
 import com.mopgp.framework.TestService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.mopgp.ejemplo.db;
+package com.mopgp.ejemplo2.db;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

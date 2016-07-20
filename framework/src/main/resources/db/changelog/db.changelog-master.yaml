@@ -33,4 +33,4 @@ databaseChangeLog:
                   constraints:
                     nullable: false
   - includeAll:
-        path: modules/changelogs
+        path: classpath*:modules/changelogs

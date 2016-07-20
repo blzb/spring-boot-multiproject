@@ -1,6 +1,6 @@
-package com.mopgp.ejemplo.dao;
+package com.mopgp.ejemplo2.dao;
 
-import com.mopgp.ejemplo.db.Ejemplo;
+import com.mopgp.ejemplo2.Ejemplo2;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.security.access.prepost.PreAuthorize;
 
@@ -8,5 +8,5 @@ import org.springframework.security.access.prepost.PreAuthorize;
  * Created by apimentel on 7/4/16.
  */
 @PreAuthorize("hasRole('ROLE_USER')")
-public interface EjemploRepository extends PagingAndSortingRepository<Ejemplo, String> {
+public interface Ejemplo2Repository extends PagingAndSortingRepository<Ejemplo2, String> {
 }
