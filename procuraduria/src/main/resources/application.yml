@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mopgp?serverTimezone=UTC&nullNamePatternMatchesAll=true
+    username: root
+    password:
+    driverClassName: com.mysql.jdbc.Driver
+reticula:
+  datasource:
+    url: jdbc:mysql://localhost:3306/reticula?serverTimezone=UTC&nullNamePatternMatchesAll=true
+    username: root
+    password:
+    driverClassName: com.mysql.jdbc.Driver

@@ -1,6 +1,6 @@
 package com.mopgp.ejemplo2.dao;
 
-import com.mopgp.ejemplo2.Ejemplo2;
+import com.mopgp.ejemplo2.db.Ejemplo2;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.security.access.prepost.PreAuthorize;
 
